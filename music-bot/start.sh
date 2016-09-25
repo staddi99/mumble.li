@@ -3,6 +3,7 @@
 if [ "$1" != '' ];
 then
     bid="$1"
+    mpdport= $((7700+$bid))
 fi
 
 
@@ -47,6 +48,7 @@ tmux new-session -d -s bot"$bid" "LD_LIBRARY_PATH=$HOME/src/celt/lib/ ruby $HOME
 
 ### Optional: Clear playlist, add music and play it; three lines for every bot ###
 # Bot
-mpc -p 770"$bid" clear
-mpc -p 770"$bid" add http://ogg.theradio.cc/
-mpc -p 770"$bid" play
+
+mpc -p "$mpdport" clear
+mpc -p "$mpdport" add http://ogg.theradio.cc/
+mpc -p "$mpdport" play
