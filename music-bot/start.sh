@@ -6,6 +6,11 @@ then
     mpdport=$((7700+$bid))
 fi
 
+if [ "$2" != '' ];
+then
+    mpdport="$2"
+fi
+
 
 # Do an update of youtube-dl on every start as there are very often updates.
 if [ -f $HOME/src/youtube-dl ]; then
