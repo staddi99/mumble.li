@@ -3,7 +3,6 @@
 if [ "$1" != '' ];
 then
     bid="$1"
-    mpdport=$((7700+$bid))
 fi
 
 if [ "$2" != '' ];
