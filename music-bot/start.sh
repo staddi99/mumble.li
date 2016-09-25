@@ -48,5 +48,5 @@ tmux new-session -d -s bot"$bid" "LD_LIBRARY_PATH=$HOME/src/celt/lib/ ruby $HOME
 ### Optional: Clear playlist, add music and play it; three lines for every bot ###
 # Bot
 mpc -p 770"$bid" clear
-mpc -p 770"$bid" add http://streams.radio-gfm.net/rockpop.ogg.m3u
+mpc -p 770"$bid" add http://ogg.theradio.cc/
 mpc -p 770"$bid" play
